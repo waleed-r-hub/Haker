@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>king Hacker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="rain"></canvas>
+<main class="card">
+  <h1>&gt;_ Hacker v3.0</h1>
+  <div class="sub">أدخل رقم الموبايل المستهدف</div>
+
+  <section id="start">
+    <input id="num" type="tel" inputmode="numeric" maxlength="15" placeholder="01XXXXXXXXX" autocomplete="off">
+    <div class="err" id="err"></div>
+    <button id="go" type="button">▶ ابدأ الاختراق</button>
+  </section>
+
+  <section id="run">
+    <div id="term"></div>
+    <div id="bits"></div>
+    <div class="bar"><div id="fill"></div></div>
+    <div id="pct">0%</div>
+  </section>
+
+  <section id="done">
+    <div class="big">⚠ تم التهكير ⚠</div>
+    <div id="tgt" style="direction:ltr"></div>
+    <button id="ok" type="button">OK</button>
+  </section>
+
+  <section id="pick">
+    <div style="font-size:1.15rem;margin-bottom:14px">☠ اختار اللي عايز تخترقه:</div>
+    <div class="grid">
+      <button class="opt" type="button" data-t="واتساب">💬 واتساب</button>
+      <button class="opt" type="button" data-t="الهاتف كله">📱 الهاتف كله</button>
+      <button class="opt" type="button" data-t="الصور والفيديوهات">🖼️ الصور والفيديوهات</button>
+      <button class="opt" type="button" data-t="الكاميرا والميكروفون">🎥 الكاميرا والميكروفون</button>
+      <button class="opt" type="button" data-t="الرسائل والمكالمات">✉️ الرسائل والمكالمات</button>
+      <button class="opt" type="button" data-t="الحسابات وكلمات السر">🔑 الحسابات وكلمات السر</button>
+    </div>
+  </section>
+
+  <section id="res">
+    <div style="font-size:1rem">تم الوصول إلى</div>
+    <div id="rt" style="font-size:1.5rem;margin:8px 0 12px;text-shadow:0 0 12px var(--red)"></div>
+    <div id="rlog"></div>
+    <button id="ok2" type="button">OK</button>
+  </section>
+
+  <section id="aware">
+    <div class="note">
+<h1>جرب حظك تكسب نشر معلوماتك</h1>
+
+    </div>
+    <button id="again" type="button">ok</button>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

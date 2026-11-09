@@ -1,0 +1,40 @@
+:root{color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--g:#00ff41;--gd:#0a7a22;--bg:#020a04;--red:#ff2a4d}
+html{height:100%}
+*{box-sizing:border-box}
+body{margin:0;min-height:100%;background:var(--bg);color:var(--g);font-family:"Courier New",ui-monospace,monospace;display:flex;align-items:center;justify-content:center;padding:16px}
+#rain{position:fixed;inset:0;width:100%;height:100%;z-index:0;opacity:.55}
+.card{position:relative;z-index:1;width:100%;max-width:520px;background:rgba(0,12,4,.88);border:1px solid var(--g);border-radius:10px;padding:22px;box-shadow:0 0 30px rgba(0,255,65,.35)}
+h1{margin:0 0 4px;font-size:1.4rem;text-align:center;text-shadow:0 0 8px var(--g);letter-spacing:1px}
+.sub{text-align:center;color:var(--gd);font-size:.85rem;margin-bottom:18px}
+input{width:100%;background:#000;border:1px solid var(--g);color:var(--g);padding:13px;font:inherit;font-size:1.15rem;text-align:center;border-radius:6px;direction:ltr;outline:none;letter-spacing:2px}
+input:focus{box-shadow:0 0 12px var(--g)}
+button{width:100%;margin-top:12px;padding:13px;background:transparent;color:var(--g);border:1px solid var(--g);border-radius:6px;font:inherit;font-size:1.05rem;cursor:pointer;transition:.2s}
+button:hover{background:var(--g);color:#000;box-shadow:0 0 16px var(--g)}
+.err{color:var(--red);text-align:center;font-size:.85rem;min-height:1.2em;margin-top:8px}
+#run{display:none}
+#term{background:#000;border:1px solid var(--gd);border-radius:6px;padding:10px;height:170px;overflow:hidden;font-size:.8rem;direction:ltr;text-align:left;line-height:1.5}
+#bits{margin:10px 0;font-size:.75rem;color:var(--gd);height:2.9em;overflow:hidden;word-break:break-all;direction:ltr;opacity:.9}
+.bar{height:14px;border:1px solid var(--g);border-radius:3px;overflow:hidden}
+#fill{height:100%;width:0;background:repeating-linear-gradient(90deg,var(--g) 0 8px,#008f23 8px 12px);box-shadow:0 0 10px var(--g)}
+#pct{text-align:center;margin-top:6px;font-size:.9rem}
+#done,#aware,#pick,#res{display:none;text-align:center}
+#pick,#res{color:var(--red)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.grid button{margin-top:0;color:var(--red);border-color:var(--red);font-size:.95rem;padding:14px 6px}
+.grid button:hover,#res button:hover{background:var(--red);color:#000;box-shadow:0 0 18px var(--red)}
+#res button{color:var(--red);border-color:var(--red);margin-top:14px}
+#rlog{direction:ltr;text-align:left;font-size:.8rem;background:#000;border:1px solid var(--red);padding:10px;border-radius:6px;line-height:1.6}
+#done{color:var(--red)}
+#done .big{font-size:2rem;color:var(--red);text-shadow:0 0 14px var(--red),0 0 30px var(--red);margin:8px 0;font-weight:bold;animation:pop .7s cubic-bezier(.2,1.6,.4,1) both,glitch 1.2s .7s infinite}
+#done .big::before{content:"☠";display:block;font-size:3.4rem;animation:beat .8s infinite}
+#done button{color:var(--red);border-color:var(--red);margin-top:16px}
+#done button:hover{background:var(--red);color:#000;box-shadow:0 0 18px var(--red)}
+.card.hacked{border-color:var(--red);box-shadow:0 0 45px rgba(255,42,77,.7);animation:shake .5s 3}
+body.hacked::after{content:"";position:fixed;inset:0;z-index:2;background:rgba(255,42,77,.45);pointer-events:none;animation:flash 1.2s forwards}
+@keyframes flash{from{opacity:1}to{opacity:0}}
+@keyframes pop{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
+@keyframes beat{50%{transform:scale(1.25)}}
+@keyframes shake{0%,100%{transform:translate(0)}20%{transform:translate(-8px,3px)}40%{transform:translate(7px,-4px)}60%{transform:translate(-6px,-3px)}80%{transform:translate(5px,4px)}}
+@keyframes glitch{0%,90%,100%{transform:translate(0);opacity:1}92%{transform:translate(-4px,2px);opacity:.6}94%{transform:translate(4px,-2px);opacity:1}96%{transform:translate(-2px,0);opacity:.5}}
+.note{margin-top:12px;padding:12px;border:1px dashed var(--g);border-radius:6px;color:#b6ffc8;font-size:.9rem;line-height:1.7;font-family:system-ui,"Segoe UI",Tahoma,sans-serif}
+.note b{color:var(--g)}
